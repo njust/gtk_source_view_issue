@@ -8,7 +8,7 @@ fn build_ui(application: &gtk::Application) {
     window.set_default_size(1280, 800);
 
     let buffer = sourceview5::Buffer::new(None);
-    buffer.set_highlight_syntax(true);
+    // buffer.set_highlight_syntax(true);
 
     let data = std::fs::read("test.txt").unwrap();
     let text = String::from_utf8(data).unwrap();
@@ -17,11 +17,11 @@ fn build_ui(application: &gtk::Application) {
     let container = gtk::Box::new(gtk::Orientation::Horizontal, 0);
 
     let view = sourceview5::View::with_buffer(&buffer);
-    view.set_monospace(true);
-    view.set_background_pattern(sourceview5::BackgroundPatternType::Grid);
+    // view.set_monospace(true);
+    // view.set_background_pattern(sourceview5::BackgroundPatternType::Grid);
     view.set_show_line_numbers(true);
-    view.set_highlight_current_line(true);
-    view.set_tab_width(4);
+    // view.set_highlight_current_line(true);
+    // view.set_tab_width(4);
     view.set_hexpand(true);
     container.append(&view);
     let map = sourceview5::Map::new();
